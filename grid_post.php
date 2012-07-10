@@ -34,9 +34,9 @@ echo '
 	 <td style="text-align: left;"><a href="'; echo $url_c; echo '"><img width="152" height="110" alt="'; echo $title_c; echo '" src="'; echo $image_c; echo'" /></a></td>
  </tr>
  <tr>
-	 <td valign="top" style="text-align: left; "><strong><a href="'; echo $url_a; echo '">'; echo $art['para_a']; echo'</a></strong></td>
-	 <td valign="top" style="text-align: left; "><strong><a href="'; echo $url_b; echo '">'; echo $art['para_b']; echo'</a></strong></td>
-	 <td valign="top" style="text-align: left; "><strong><a href="'; echo $url_c; echo '">'; echo $art['para_c']; echo'</a></strong></td>
+	 <td valign="top" style="text-align: left; "><strong><a href="'; echo $url_a; echo '">'; echo $art['short-a']; echo'</a></strong></td>
+	 <td valign="top" style="text-align: left; "><strong><a href="'; echo $url_b; echo '">'; echo $art['short-b']; echo'</a></strong></td>
+	 <td valign="top" style="text-align: left; "><strong><a href="'; echo $url_c; echo '">'; echo $art['short-c']; echo'</a></strong></td>
  </tr>';
 };
 };

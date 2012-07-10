@@ -19,16 +19,24 @@
 	<div id="header-type" class="grid_5"><h2 id="text-box">Grid</h2></div>	
 	
 	<script type="text/javascript">
+	
+	//add rows
     $(function() {
         var newRowNum = 0;
 
         $('#addnew').click(function() {
             newRowNum++;
-            var addRow = $(this).parent().parent();
+            var addRow = $(this).parent();
             var newRow = addRow.clone();
             $('input', addRow).val('');
-            $('td:first-child', newRow).html(newRowNum);
-            $('td:last-child', newRow).html('<a href="" class="remove">Remove<\/a>');
+            $('a#addnew', newRow).html(newRowNum);
+            $('div.url-a', newRow).html;
+            $('div.title-a', newRow).html;
+            $('div.url-b', newRow).html;
+            $('div.title-b', newRow).html;
+            $('div.url-c', newRow).html;
+            $('div.title-c', newRow).html;
+            $('div#remove', newRow).html('<a href="" class="remove">Remove</a>');
             $('input', newRow).each(function() {
                 var newID = 'article[' + newRowNum + '][' +  $(this).attr('id') + ']';
                 $(this).attr('name', newID);
@@ -43,9 +51,8 @@
             return false;
         });
     });
- 	</script>
- 	
-	<script type="text/javascript">
+    
+ 	//submit
 	$(document).ready(function(){
 		$("#grid_form").submit( function () {    
 		  $.post(
@@ -61,24 +68,22 @@
 		  return false}; 
 		});   
 	});
+	
 	</script>
 	
 	<div id="menu" class="grid_3">	
 		<form name="grid_form" id="grid_form" action="grid_post.php" accept-charset="UTF-8" method="post">
-		<table id="tabdata">
-			<tbody>
-				<tr>
-					<td><a id="addnew" href="">Add</a></td>
-					<td><input id="url_a" placeholder="url_a" size="2" name="article[0][urla]" type="text" /></td>
-					<td><input id="para_a" placeholder="paragraph_a" size="2" name="article[0][para_a]" type="text" /></td>
-					<td><input id="url_b" placeholder="url_b" size="2" name="article[0][urlb]" type="text" /></td>
-					<td><input id="para_b" placeholder="paragraph_b" size="2" name="article[0][para_b]" type="text" /></td>
-					<td><input id="url_c" placeholder="url_c" size="2" name="article[0][urlc]" type="text" /></td>
-					<td><input id="para_c" placeholder="paragraph_c" size="2" name="article[0][para_c]" type="text" /></td>
-					<td></td>
-				</tr>
-			</tbody>
-		</table>
+		<div id="divdata">
+			<a id="addnew" href="">Add</a>
+			<div class="url-a"><input id="urla" placeholder="url_a" size="80" name="article[0][urla]" type="text" /></div>
+			<div class="title-a"><input id="short-a" placeholder="title_a" size="50" name="article[0][short-a]" type="text" /></div>
+			<div class="url-b"><input id="urlb" placeholder="url_b" size="80" name="article[0][urlb]" type="text" /></div>
+			<div class="title-b"><input id="short-b" placeholder="title_c" size="50" name="article[0][short-b]" type="text" /></div>
+			<div class="url-c"><input id="urlc" placeholder="url_c" size="80" name="article[0][urlc]" type="text" /></div>
+			<div class="title-c"><input id="short-c" placeholder="title_c" size="50" name="article[0][short-c]" type="text" /></div>
+			<div id="remove"></div>
+		</div>
+		
 		<div id="panel">
 		<input type="submit" value="Scoop!" id="publish"/>
 		Export?<input type="checkbox" name="rules" />
