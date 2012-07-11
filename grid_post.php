@@ -2,7 +2,7 @@
 
 <!-- Copy the below --!>
 
-<table width="100%" cellspacing="1" cellpadding="1" border="0">
+<table width="100%" cellspacing="1" cellpadding="1" border="0" id="1.0">
 <tbody>
     
 <?php
@@ -33,11 +33,16 @@ echo '
 	 <td style="text-align: left;"><a href="'; echo $url_b; echo '"><img width="152" height="110" alt="'; echo $title_b; echo '" src="'; echo $image_b; echo'" /></a></td>
 	 <td style="text-align: left;"><a href="'; echo $url_c; echo '"><img width="152" height="110" alt="'; echo $title_c; echo '" src="'; echo $image_c; echo'" /></a></td>
  </tr>
+ <tr></tr>
  <tr>
 	 <td valign="top" style="text-align: left; "><strong><a href="'; echo $url_a; echo '">'; echo $art['short-a']; echo'</a></strong></td>
 	 <td valign="top" style="text-align: left; "><strong><a href="'; echo $url_b; echo '">'; echo $art['short-b']; echo'</a></strong></td>
 	 <td valign="top" style="text-align: left; "><strong><a href="'; echo $url_c; echo '">'; echo $art['short-c']; echo'</a></strong></td>
- </tr>';
+ </tr>
+ <tr>
+ 	<td>&#160;</td>
+ </tr>'
+ ;
 };
 };
 ?>

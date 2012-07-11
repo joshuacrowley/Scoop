@@ -16,8 +16,10 @@
 #listy {background-color: #eff298;}
 #tricks-none {background-color: #a3f298;}
 
-
-
+a#addnew { float:left; background-color: #FEDFC0; width: 50px; height:50px; margin-bottom: 100px; }
+p#add { padding:10px;}
+div#divdata { };
+a.remove { float: right; }
 
 /* Typography */
 html,body {height:100%;}
